@@ -9,26 +9,33 @@
 // Se XP for entre 9001 e 10000 = Imortal
 // Se XP for maior ou igual a 10001 = Radiante
 
-// Verifica o nível do herói com base na experiência
-let experiencia = 400;
+let experiencia; // Inicializa a variável sem valor
 let apelido = "Lord of Shadows";
 
-if (experiencia >= 1 && experiencia <= 1000) {
-    console.log("O herói de nome " + apelido + " está no nível Ferro.");
-} else if (experiencia >= 1001 && experiencia <= 2000) {
-    console.log("O herói de nome " + apelido + " está no nível Bronze.");
-} else if (experiencia >= 2001 && experiencia <= 5000) {
-    console.log("O herói de nome " + apelido + " está no nível Prata.");
-} else if (experiencia >= 5001 && experiencia <= 7000) {
-    console.log("O herói de nome " + apelido + " está no nível Ouro.");
-} else if (experiencia >= 7001 && experiencia <= 8000) {
-    console.log("O herói de nome " + apelido + " está no nível Platina.");
-} else if (experiencia >= 8001 && experiencia <= 9000) {
-    console.log("O herói de nome " + apelido + " está no nível Ascendente.");
-} else if (experiencia >= 9001 && experiencia <= 10000) {
-    console.log("O herói de nome " + apelido + " está no nível Imortal.");
-} else if (experiencia > 10000) {
-    console.log("O herói de nome " + apelido + " está no nível Radiante.");
-} else {
-    console.log("O herói de nome " + apelido + " ainda não iniciou sua jornada.");
+// Função para verificar o nível do herói
+function verificarNivel(experiencia) {
+    
+    if (experiencia >= 1 && experiencia <= 1000) {
+        console.log("O herói de nome " + apelido + " está no nível Ferro.");
+    } else if (experiencia >= 1001 && experiencia <= 2000) {
+        console.log("O herói de nome " + apelido + " está no nível Bronze.");
+    } else if (experiencia >= 2001 && experiencia <= 5000) {
+        console.log("O herói de nome " + apelido + " está no nível Prata.");
+    } else if (experiencia >= 5001 && experiencia <= 7000) {
+        console.log("O herói de nome " + apelido + " está no nível Ouro.");
+    } else if (experiencia >= 7001 && experiencia <= 8000) {
+        console.log("O herói de nome " + apelido + " está no nível Platina.");
+    } else if (experiencia >= 8001 && experiencia <= 9000) {
+        console.log("O herói de nome " + apelido + " está no nível Ascendente.");
+    } else if (experiencia >= 9001 && experiencia < 10000) {
+        console.log("O herói de nome " + apelido + " está no nível Imortal.");
+    } else if (experiencia >= 10000) {
+        console.log("O herói de nome " + apelido + " está no nível Radiante.");
+    } else {
+        console.log("O herói de nome " + apelido + " ainda não iniciou sua jornada.");
+    }
 }
+
+// Definição da experiência depois do código
+experiencia = 10000; // Você pode alterar esse valor
+verificarNivel(experiencia); // Chama a função para verificar o nível
