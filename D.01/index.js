@@ -37,5 +37,5 @@ function verificarNivel(experiencia) {
 }
 
 // Definição da experiência depois do código
-experiencia = 10000; // Você pode alterar esse valor
+experiencia = 10; // Você pode alterar esse valor
 verificarNivel(experiencia); // Chama a função para verificar o nível
